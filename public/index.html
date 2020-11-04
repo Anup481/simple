@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Front end</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1 class="title">Database - REST API</h1>
+        <div class="container"></div>
+        <script>
+            fetch("http://localhost:9000/api/fetch/Anup?name=Anup",{
+                method: "GET",
+                headers:{"Content-type": "application/json;charset=UTF-8"}
+            })
+  .then(response => response.json())
+  .then(json => console.log(json))
+  .catch(error => console.log('error', error));
+        </script>
+    </body>
+</html>
